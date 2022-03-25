@@ -1,0 +1,264 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header> <!-- id="main-form"  -->
+      <mat-card-title>Cadastre-se </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form 
+      class="form"
+        action="#" 
+        [formGroup]="personalData"
+        (ngSubmit)="submit()"
+        #form="ngForm"
+      >
+        <div class="form-row col">
+          <mat-form-field appearance="fill" >
+            <mat-label>Nome</mat-label>
+              <input 
+                type="text" 
+                matInput 
+                placeholder="Seu nome..."
+                name="name"
+                autocomplete="false"
+                required
+                minlength="3"
+                formControlName="name"
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['name'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['name'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+        
+         <mat-form-field appearance="fill" >
+            <mat-label>Sobrenome</mat-label>
+              <input 
+                type="text" 
+                matInput 
+                placeholder="Seu sobrenome..."               
+                name="lastName"
+                autocomplete="false"
+                required
+                minlength="3"
+                formControlName="lastname"
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['lastname'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['lastname'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+          </div>
+          <div class="form-row col">
+          <mat-form-field appearance="fill" >
+            <mat-label>Username </mat-label>
+              <input 
+                type="text" 
+                matInput 
+                placeholder="Seu username..."                
+                name="username"
+                autocomplete="false"
+                required
+                minlength="3"
+                formControlName="username"
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['username'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['username'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+       
+       
+            
+          <mat-form-field appearance="fill" >
+            <mat-label>CPF</mat-label>
+              <input 
+                type="tel" 
+                matInput 
+                placeholder="Seu CPF..."               
+                name="cpf"
+                autocomplete="false"
+                required
+                minlength="3"
+                formControlName="cpf"
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['cpf'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['cpf'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+            </div>
+            <div class="form-row col">
+            <mat-form-field appearance="fill"> 
+              <mat-label>Telefone1</mat-label>
+                <input 
+                  type="tel" 
+                  matInput 
+                  placeholder="Seu telefone..."                  
+                  name="telefone1"
+                  autocomplete="false"
+                  required
+                  minlength="3"
+                  formControlName="tel1"
+                >
+                <mat-error>
+                  <span *ngIf="personalData.controls['tel1'].getError('required')">
+                   Este campo é orbigatório  
+                  </span>            
+                  <span *ngIf="personalData.controls['tel1'].getError('minlength')">
+                   Faltam caracteres 
+                  </span>            
+                   </mat-error>
+           </mat-form-field>
+                
+           <mat-form-field appearance="fill"> 
+             <mat-label>Telefone2</mat-label>
+                <input 
+                  type="tel" 
+                  matInput 
+                  placeholder="Seu telefone..."                 
+                  name="Telefone2"
+                  autocomplete="false"
+                  required
+                  minlength="3"
+                  formControlName="tel2"
+                >
+                <mat-error>
+                  <span *ngIf="personalData.controls['tel2'].getError('required')">
+                   Este campo é orbigatório  
+                  </span>            
+                  <span *ngIf="personalData.controls['tel2'].getError('minlength')">
+                   Faltam caracteres 
+                  </span>            
+                   </mat-error>
+              </mat-form-field >
+            </div>
+            <div class="form-row col">
+          <mat-form-field appearance="fill" class="grow" >
+            <mat-label>Endereço</mat-label>
+              <input 
+                type="text" 
+                matInput 
+                placeholder="Seu endereço..."               
+                name="adress"
+                autocomplete="false"
+                required
+                minlength="3"
+                formControlName="adress"
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['adress'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['adress'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+        </div>
+         <div class="form-row col">
+          <mat-form-field appearance="fill" class="grow" >
+            <mat-label>Complemento</mat-label>
+              <input 
+                type="text" 
+                matInput 
+                placeholder="Seu Complemento.."              
+                name="Complement"
+                autocomplete="false"
+                required
+                minlength="3"
+                formControlName="complement"
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['complement'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['complement'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-row col">
+          <mat-form-field appearance="fill" >
+            <mat-label>Senha</mat-label>
+              <input
+                type="password" 
+                matInput 
+                placeholder="Digite sua senha..."              
+                name="password1"
+                autocomplete="false"
+                required
+                minlength="8"
+                formControlName="password1"
+                
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['password1'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['password1'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>
+          </mat-form-field>
+      
+        
+          <mat-form-field appearance="fill" >
+            <mat-label>Confirmação Senha</mat-label>
+              <input
+                type="password" 
+                matInput 
+                placeholder="Confirme sua Senha..."             
+                name="password2"
+                autocomplete="false"
+                required
+                minlength="8"
+                formControlName="password2"
+                
+              >
+              <mat-error>
+                <span *ngIf="personalData.controls['password2'].getError('required')">
+                 Este campo é orbigatório  
+                </span>            
+                <span *ngIf="personalData.controls['password2'].getError('minlength')">
+                 Faltam caracteres 
+                </span>            
+                 </mat-error>       
+              
+          </mat-form-field>
+        </div>
+        <div class="form-row col">
+          <button 
+          mat-raised-button 
+          type="submit" 
+          class="grow"
+          id="botao"
+          [disabled]="personalData.invalid  || 
+          validarSenha(personalData.controls['password1'].value, personalData.controls['password2'].value)"
+          >Cadastrar</button>
+         </div>
+              </form>
+   </mat-card-content>
+    </mat-card>
+  </div>
+
+
+
+ 
+ 

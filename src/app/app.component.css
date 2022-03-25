@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    height: 100vh;
+     justify-content: center;
+    align-items: center; 
+    border-radius: 150px;
+    background-color: darkolivegreen;
+    
+}
+    #main-form{
+        width: 500px;
+       
+    }
+    .form-row{
+        justify-content: space-between;
+        display: flex;
+        
+    }
+    .col {
+        flex-direction: row !important;
+
+      }
+      .grow {
+        width: 100%;
+        border-radius: 60px;
+      
+       
+          }
+      .form{
+          border-radius: 60px;
+      }
+      #botao{
+          background-color: darkolivegreen;
+          color: white;
+      }
